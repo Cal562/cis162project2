@@ -32,11 +32,6 @@ main {
   gap: 20px;
 }
 
-main > * {
-  outline-style: dashed;
-  outline-color: red;
-}
-
 #artists { grid-area: 1/1;}
 #songs { grid-area: 1/2;}
 #similar { grid-area: 2/1;}
@@ -75,8 +70,6 @@ a {
   color: hotpink;
   text-shadow: 0 0 5px red, 0 0 10px tan;
 }
-
-
 
 #contact {
   text-align: center;
