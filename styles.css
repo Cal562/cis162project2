@@ -1,19 +1,35 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap');
 
-body {
-  font-family: sans-serif;
-  background-color: rebeccapurple;
+html {
+  background: url(bitmap.png);
+  background-size: 30px;
+  height: 100%;
+  font-size: 13px;
+  /*pattern or repeat?*/
 }
 
-header {
+.body {
+  background-color: #3545b7;
+  box-shadow: rgb(51, 51, 51) 5px 0px 15px,
+               rgb(51, 51, 51) -5px 0px 15px;
+  margin: 0px auto;
+  width: 80%;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  /*Figure out height and width scaling*/
+}
+
+.title {
   text-align: center;
 }
 
 .logo {
   width: 450px;
+  /*Figure out scaling for smaller displays*/
 }
 
-main {
+.main {
   margin: auto;
   max-width: 80%;
 }
@@ -23,7 +39,7 @@ main {
   text-align: center;
   max-width: 70%;
   font-size: 22px;
-  padding-bottom: 10px;
+  padding: 25px;
 }
 
 #grid-main {
@@ -33,11 +49,6 @@ main {
   gap: 20px;
 }
 
-#artists { grid-area: 1/1;}
-#songs { grid-area: 1/2;}
-#similar { grid-area: 2/1;}
-#streaming {  grid-area: 2/2;}
-
 #artists,
 #songs,
 #similar,
@@ -45,8 +56,8 @@ main {
   padding: 5px;
 }
 
-a {
-  color: #000;
+.link {
+  color: #a735b7;
   transition: color 0.3s;
   text-decoration: none;
 }
@@ -86,6 +97,7 @@ a {
   padding: 10px;
   margin: auto;
   max-width: 40%;
+  /*Move position to bottom*/
 }
 
 #feedback {
@@ -97,28 +109,23 @@ a {
   transition: .5s;
 }
 
-footer {
+.footer {
   background-color: #000;
   color: #fff;
   padding: 20px 0;
 }
 
-#grid-gallery{
+/* Gallery */
+#grid-gallery {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns:  1fr 1fr 1fr;
   gap: 25px;
 }
 
-#fst {grid-area: 1 / 1 / 2;}
-#snd {grid-area:  1 / 2 / 2;}
-#trd {grid-area: 1 / 3 / 2;}
-#frth {grid-area: 2 / 1 / 3;}
-#fth {grid-area:  2 / 2 / 3;}
-#sxth {grid-area: 2 / 3 / 3;}
-
 div.gallery {
-  width: 200px;
+  margin: auto;
+  width: 75%;
 }
 
 div.gallery img {
@@ -131,6 +138,7 @@ div.desc {
   text-align: center;
 }
 
+/* Form */
 #survey {
   padding: 20px;
 }
@@ -138,7 +146,6 @@ div.desc {
 form#survey > fieldset {
   background-color: powderblue;
  }
-
 
 div.formRow {
   display: flex;
@@ -149,7 +156,6 @@ div.formRow {
 div.formRow > * {
   flex: 1 1 150px;
  }
-
 
 legend {
   background-color: rgb(0, 0, 0);
@@ -162,16 +168,34 @@ textarea {
   margin-top: 10px;
   height: 90px;
   width: 100%;
- }
-
+}
 
 div#buttons {
   text-align: center;
   width: 100%;
- }
+}
  
 input[type='submit'], input[type='reset'] {
   font-size: 1.2em;
   padding: 3px;
   margin: 5px;
- }
+}
+
+/* Artists - Use inspect to see more for editting collapse*/
+.accordion {
+  background-color: purple;
+}
+
+.accordion-item {
+  margin-bottom: 3px;
+}
+
+.accordion-button {
+  font-size: 16px;
+  padding: 12px;
+}
+.accordion-body {
+  font-size: 14px
+}
+
+/* Platforms */
